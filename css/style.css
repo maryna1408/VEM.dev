@@ -586,7 +586,7 @@ h3{
 .name {
   text-align: center;
 }
-.personal_inf h4 {
+.personal_inf .name {
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 5px;
@@ -650,6 +650,12 @@ h3{
 .tes-h2{
   width: 700px;
   text-align: center;
+  margin-bottom: 10px;
+}
+.mc{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
 
