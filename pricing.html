@@ -15,13 +15,13 @@
     <link rel="shortcut icon" href="images/shortcut.webp" />
   </head>
   <body>
-    <header class="header">
+    <header class="header main-header">
       <div class="container wide-container">
         <nav class="navbar">
           <a href="index.html" class="logo">
             <i class="cube fas fa-cube"></i>
-            <span class="logo-span"><i class="fas fa-angle-left"></i>VEM</span> dev/<i class="fas fa-angle-right"></i
-          ></a>
+            <span class="logo-span"><i class="fas fa-angle-left"></i>VEM</span> dev/<i class="fas fa-angle-right"></i>
+          </a>
           <ul class="nav">
             <li><a class="hover-opacity" href="features.html">Vlastnosti</a></li>
             <li><a class="hover-opacity" href="#portfolio">Naše práce</a></li>
@@ -30,25 +30,33 @@
             <li><a class="hover-opacity" href="contacts.html">Kontakty</a></li>
             <li><a target="_blank" class="hover-opacity" href="https://www.instagram.com/vem.dev/?hl=ru">Blog</a></li>
           </ul>
+          <!-- <button class="account-button hover-opacity"><i class="far fa-user-circle user-icon"></i><span class="account-span">Account
+          </span></button> -->
         </nav>
       </div>
     </header>
-    <main class="main">
-      <div class="container hero-container feature-hero-container">
-        <h2 class="contacts-h2 bordered">Naše súradnice</h2>
-      </div>
-      <div class="containe contacts-container">
-        <div class="contacts">
-          <h3>Kontakty:</h3>
-          <a class="hover-opacity" href="tel:+421950142462">+421 950 142 462</a>
-          <a class="hover-opacity" href="mailto:marynach48@gmail.con">vemdev@gmail.com</a>
-          <div class="adress">
-            Adresa:
-            <a class="hover-opacity" target="_blank" href="https://goo.gl/maps/e7oRs7VnEboLJZ7U9">Hollého, 905 01 Senica</a>
+    <!-- <div class="hero hero-container"></div> -->
+    <main class="hero main pricing-main">
+      <div class="container">
+        <div class="swiper-container plans-slider">
+          <div class="prices swiper-wrapper">
+            <section class="swiper-slide plans-slide">
+              <h3>VIZITKOVÉ STRÁNKY</h3>
+              <h4>od 200eur</h4>
+            </section>
+            <section class="swiper-slide plans-slide">
+              <h3>PRISTÁVANIE</h3>
+              <h4>od 300eur</h4>
+            </section>
+            <section class="swiper-slide plans-slide">
+              <h3>ADRESÁRE STRÁNOK</h3>
+              <h4>od 400eur</h4>
+            </section>
+            <section class="swiper-slide plans-slide">
+              <h3>INTERNETOVÉ OBCHODY</h3>
+              <h4>od 500eur</h4>
+            </section>
           </div>
-        </div>
-        <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2634.3304014497003!2d17.372445471185348!3d48.680047361722735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476cb4debf4c66cd%3A0x434e9ca9254178e!2sHoll%C3%A9ho%2C%20905%2001%20Senica!5e0!3m2!1sru!2ssk!4v1637597892730!5m2!1sru!2ssk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </main>
@@ -72,15 +80,20 @@
           <div>
             <h3 class="gold-color">More on The Blog</h3>
             <ul class="dropmenu">
-              <li><a href="/">About us</a></li>
-              <li><a href="/">Contributors & Writers</a></li>
-              <li><a href="/">Write For Us</a></li>
-              <li><a href="/">Contact Us</a></li>
-              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="/">O nás</a></li>
+              <li><a href="features.html">Vlastnosti</a></li>
+              <li><a href="/">Ceny</a></li>
+              <li><a href="#testimonials">Recenzie</a></li>
+              <li><a href="contacts.html">Kontakty</a></li>
+              <li><a target="_blank" href="https://www.instagram.com/vem.dev/?hl=ru">Blog</a></li>
             </ul>
           </div>
           <div>
-            <h3 class="gold-color">More on MNTN</h3>
+            <h3 class="gold-color">
+              More on <span class="logo-span"><i class="fas fa-angle-left"></i>VEM</span> dev/<i
+                class="fas fa-angle-right"
+              ></i>
+            </h3>
             <ul class="dropmenu">
               <li><a href="/">The Team</a></li>
               <li><a href="/">Jobs</a></li>

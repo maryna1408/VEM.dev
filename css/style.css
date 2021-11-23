@@ -312,15 +312,9 @@ h2{
   font-family: 'Playfair Display';
   font-weight: 600;
   font-size: 64px;
-  width: 600px;
   padding: 27px 0;
   line-height: 1.3;
 }
-/* .tes-h2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 h3{
   padding-bottom: 16px;
   font-size: 24px;
@@ -404,10 +398,11 @@ h3{
 .hero-container{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .hero{
-  background:  linear-gradient(160deg, #0B1D26, transparent 45%) ,linear-gradient(0deg, #0B1D26, transparent 20%), url('../images/pic.webp') no-repeat center / cover, var(--theme-color);
-  padding: 277px 0;
+  background:  linear-gradient(160deg, #0B1D26, transparent 70%) ,linear-gradient(0deg, #0B1D26, transparent 60%), url('../images/main.webp') no-repeat center / cover, var(--theme-color);
+  padding-top: 345px;
   min-height: 1730px;
 }
 .fa-instagram::before{
@@ -449,9 +444,14 @@ h3{
 .feature-container .section:nth-child(n+2){
   margin-top: -270px;
 }
+.bordered{
+  border: 5px double var(--text-color-gold);
+  padding: 40px 70px;
+  margin-top: 20px;
+}
 .main{
-  margin-top: 200px;
-  padding-bottom: 20px;
+  padding: 20px;
+  text-align: center;
 }
 .section{
   display: flex;
@@ -512,54 +512,11 @@ h3{
 .sixth-content::before{
   content: "06";
 }
-/*=========================MAIN END===========================*/
 
-/*=========================FOOTER START===========================*/
-.footer{
-  padding-bottom: 132px;
-}
-.footer-container{
-  display: flex;
-  justify-content: space-between;
-}
-.footer-navbar{
-  display: flex;
-  justify-content: space-between;
-  width: 570px;
-}
-.footer-logo{
-  color: var(--text-color-gold);
-}
-.footer-p{
-  width: 303px;
-  padding-bottom: 122px;
-}
-.dropmenu li{
-  padding: 8px 0;
-  font-weight: 500;
-}
-.dropmenu li:hover{
-  text-decoration: underline;
-}
-.footer-logo{
-  padding-bottom: 24px;
-}
-.footer-content{
-  position: relative;
-  width: 360px;
-}
-.copyright{
-  opacity: .5;
-  font-weight: 500;
-  position: absolute;
-  bottom: 0;
-}
-.cube{
-  margin-right: 10px;
-}
-/*=========================FOOTER END===========================*/
+/*=========================.TESTIMONIALS START===========================*/
 .testimonials{
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 .sections {
   height: 100%;
@@ -658,7 +615,143 @@ h3{
   align-items: center;
   margin-bottom: 10px;
 }
+.personal_inf{
+  display: flex;
+  align-items: center;
+}
+.foto{
+  margin-right: 20px;
+}
+/*=========================.TESTIMONIALS END===========================*/
+/*=========================MAIN END===========================*/
 
+/*=========================FOOTER START===========================*/
+.footer{
+  padding-bottom: 132px;
+}
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-navbar{
+  display: flex;
+  justify-content: space-between;
+  width: 570px;
+}
+.footer-logo{
+  color: var(--text-color-gold);
+}
+.footer-p{
+  width: 303px;
+  padding-bottom: 122px;
+}
+.dropmenu li a{
+  padding: 8px 0;
+  font-weight: 500;
+}
+.dropmenu li:hover{
+  text-decoration: underline;
+}
+.footer-logo{
+  padding-bottom: 24px;
+}
+.footer-content{
+  position: relative;
+  width: 360px;
+}
+.copyright{
+  opacity: .5;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+}
+.cube{
+  margin-right: 10px;
+}
+/*=========================FOOTER END===========================*/
+
+/*=========================CONTACTS START===========================*/
+.contacts-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: normal;
+}
+.contacts a{
+  transition: .3s;
+}
+.contacts-h2{
+  margin-bottom: 80px;
+}
+.contacts h3{
+  font-size: 50px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--text-color-gold);
+}
+/*=========================CONTACTS END===========================*/
+
+/*=========================PORTFOLIO START===========================*/
+.portfolio{
+  padding-bottom: 50px;
+}
+.portfolio-img{
+  width: 450px;
+  height: 213px;
+
+}
+.portfolio-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px 0;
+  border: 2px solid var(--text-color);
+  transition: .3s;
+}
+.portfolio-item:hover{
+  border-color: var(--text-color-gold);
+}
+.portfolio-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 1600px;
+}
+.portfolio-item h3{
+  margin-top: 50px;
+  font-size: 30px;
+  /* color: var(--text-color-gold); */
+}
+/*=========================PORTFOLIO END===========================*/
+
+
+/*=========================PRICING START===========================*/
+
+.pricing-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1000px;
+}
+.plans-slide{
+  transition: .3s;
+  border: 1px solid transparent;
+  padding: 20px;
+}
+.plans-slide:hover, .plans-slide:focus{
+  border-color: var(--text-color-gold);
+}
+/*=========================PRICING END===========================*/
 
 /*=========================PAGE STYLES END===========================*/
 
