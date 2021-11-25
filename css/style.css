@@ -261,7 +261,7 @@ html {
   --theme-hue: 0;
   --theme-color: #0B1D26;
   --text-color: #ffffff;
-  --text-color-gold: #FBD784;
+  --color-gold: #FBD784;
 }
 body {
   background-color: var(--theme-color);
@@ -277,6 +277,17 @@ a,
   display: inline-flex;
   text-decoration: none;
   color: inherit;
+}
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--text-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-color);
 }
 button {
   font-size: inherit;
@@ -302,9 +313,9 @@ h1{
   font-family: 'Playfair Display';
   font-size: 68px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   line-height: 1.2;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
   font-weight: 600;
 }
 
@@ -332,7 +343,7 @@ h3{
   opacity: .6;
 }
 .gold-color{
-  color: var(--text-color-gold);
+  color: var(--color-gold);
 }
 /*=========================COMMON STYLES END=============================*/
 
@@ -360,6 +371,10 @@ h3{
 }
 .logo{
   font-size: 32px;
+}
+.logo-img{
+  height: 70px;
+  width: auto;
 }
 .logo-span{
   text-transform: uppercase;
@@ -391,6 +406,9 @@ h3{
   display: flex;
   align-items: center;
   transition: .3s;
+}
+.company-name{
+  margin: 25px 0;
 }
 /*=========================HEADER END===========================*/
 
@@ -445,7 +463,7 @@ h3{
   margin-top: -270px;
 }
 .bordered{
-  border: 5px double var(--text-color-gold);
+  border: 5px double var(--color-gold);
   padding: 40px 70px;
   margin-top: 20px;
 }
@@ -457,11 +475,11 @@ h3{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 200px;
+  padding-bottom: 250px;
 }
 .image{
   width: 566px;
-  height: 720px;
+  height: auto;
 }
 .content{
   position: relative;
@@ -523,7 +541,7 @@ h3{
   display: flex;
 }
 .sections .comments {
-  border: solid 2px #dddddd;
+  border: solid 2px var(--text-color);
   border-radius: 10px;
   transition: 0.3s;
   padding: 30px;
@@ -532,7 +550,7 @@ h3{
   margin-bottom: 80px;
 }
 .sections .comments:hover {
-  border-color: var(--text-color-gold);
+  border-color: var(--color-gold);
 }
 .fa-star:before {
   content: "\f005";
@@ -564,8 +582,8 @@ h3{
   font-size: 30px;
   height: 60px;
   width: 60px;
-  color: var(--text-color-gold);
-  border: solid 2px var(--text-color-gold);
+  color: var(--color-gold);
+  border: solid 2px var(--color-gold);
   border-radius: 999px;
   margin: 10px;
   justify-content: center;
@@ -574,14 +592,14 @@ h3{
 }
 .slider-arrow:hover {
   color: #fff;
-  background-color: var(--text-color-gold);
+  background-color: var(--color-gold);
 }
 .slider_bullet {
   display: inline-flex;
   height: 15px;
   width: 15px;
   border-radius: 999px;
-  background-color: #ccc;
+  background-color: var(--text-color);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -590,7 +608,7 @@ h3{
 }
 .slider_bullet_active {
   width: 45px;
-  background-color: var(--text-color-gold);
+  background-color: var(--color-gold);
 }
 .slider-control{
   display: flex;
@@ -639,7 +657,7 @@ h3{
   width: 570px;
 }
 .footer-logo{
-  color: var(--text-color-gold);
+  color: var(--color-gold);
 }
 .footer-p{
   width: 303px;
@@ -668,6 +686,9 @@ h3{
 .cube{
   margin-right: 10px;
 }
+.icons-mg{
+  margin-right: 7px;
+}
 /*=========================FOOTER END===========================*/
 
 /*=========================CONTACTS START===========================*/
@@ -694,8 +715,9 @@ h3{
 }
 .contacts h3{
   font-size: 50px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid var(--text-color-gold);
+  padding-bottom: 0;
+  margin-bottom: 35px;
+  border-bottom: 2px solid var(--color-gold);
 }
 /*=========================CONTACTS END===========================*/
 
@@ -719,7 +741,7 @@ h3{
   transition: .3s;
 }
 .portfolio-item:hover{
-  border-color: var(--text-color-gold);
+  border-color: var(--color-gold);
 }
 .portfolio-container{
   display: flex;
@@ -730,10 +752,27 @@ h3{
 .portfolio-item h3{
   margin-top: 50px;
   font-size: 30px;
-  /* color: var(--text-color-gold); */
 }
 /*=========================PORTFOLIO END===========================*/
 
+/*=========================TEAM START===========================*/
+.team-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0 200px 0;
+}
+.member{
+  text-align: center;
+}
+.member-img{
+  height: 400px;
+  width: auto;
+}
+.member h2{
+  font-size: 45px;
+} 
+/*=========================TEAM END===========================*/
 
 /*=========================PRICING START===========================*/
 
@@ -741,258 +780,26 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1000px;
+  padding: 350px 0 1000px 0;
 }
 .plans-slide{
-  transition: .3s;
-  border: 1px solid transparent;
-  padding: 20px;
+  border: 1px solid var(--text-color);
+  padding: 70px 40px; 
 }
 .plans-slide:hover, .plans-slide:focus{
-  border-color: var(--text-color-gold);
+  border-color: var(--color-gold);
+}
+.fa-chevron-right::before{
+  content: '\f054';
+  margin-right: 7px;
+}
+.plans-slide h4{
+  margin: 20px 0;
+  color: var(--color-gold);
+}
+.plans-slide h3{
+  border-bottom: 1px solid var(--color-gold);
 }
 /*=========================PRICING END===========================*/
 
 /*=========================PAGE STYLES END===========================*/
-
-/*=========================ADAPTATION START===========================*/
-
-/* XX-Large devices (larger desktops) */
-/* No media query since the xxl breakpoint has no upper bound on its width */
-
-/* X-Large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {
-  .wide-container{
-    max-width: auto;
-    padding: 0 20px;
-  }
-  .container{
-    padding: 0 40px;
-    min-width: auto;
-  }
-  h1{
-    font-size: 70px;
-  }
-  h2{
-    font-size: 55px;
-  }
-  .image{
-    width: 400px;
-    height: auto;
-  }
-  .header{
-    padding: 30px 0;
-  }
-  .hero{
-    min-height: 1300px;
-  }
-  .main{
-  margin-top: -150px;
-  padding-bottom: 20px;
-}
-  .content{
-    width: 600px;
-  }
-  .footer{
-    padding-bottom: 150px;
-  }
-}
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-  body{
-    font-size: 16px;
-  }
-  h1{
-    font-size: 60px;
-  }
-  h2{
-    font-size: 40px;
-  }
-  .hero{
-    min-height: 1100px;
-  }
-  .main{
-    margin-top: -100px;
-    padding-bottom: 20px;
-  }
-  .image{
-    width: 300px;
-    height: auto;
-  }
-  .footer-navbar{
-    width: 440px;
-  }
-  h3{
-    font-size: 20px;
-  }
-  .content{
-    width: 546px;
-  }
-  .follow{
-    width: 70px;
-  }
-}
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-  h1{
-    font-size: 45px;
-  }
-  h2{
-    font-size: 40px;
-    width: 360px;
-    padding: 15px 0;
-  }
-  .hero{
-    padding: 220px 0;
-    min-height: 900px;
-  }
-  .content{
-    width: 331px;
-  }
-  .content::before{
-    font-size: 180px;
-    top: -125px;
-  }
-  .main{
-    margin-top: -60px;
-    padding-bottom: 20px;
-  }
-  .section{
-    padding-bottom: 140px;
-  }
-  .footer-navbar{
-    width: 350px;
-  }
-  .slider{
-    height: 210px;
-  }
-  .rule-span{
-    letter-spacing: 4px;
-  }
-  .content-p{
-    padding-bottom: 15px;
-  }
-}
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-  body{
-    font-size: 12px;
-  }
-  h1{
-    font-size: 35px;
-  }
-  h2{
-    font-size: 28px;
-    width: 277px;
-    padding: 15px 0;
-  }
-  h3{
-    font-size: 17px;
-  }
-  .content{
-    width: 244px;
-  }
-  .image{
-    width: 205px;
-  }
-  .rule-span{
-    letter-spacing: 3px;
-  }
-  .hero{
-    min-height: 600px;
-  }
-  .main{
-    margin-top: -30px;
-  }
-  .nav li:nth-child(n+2){
-    margin-left: 10px;
-  }
-  .footer-content{
-    position: static;
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    justify-content: center;
-  }
-  .footer-container{
-    flex-wrap: wrap;
-    position: relative;
-  }
-  .footer-navbar{
-    width: 80%;
-  }
-  .copyright{
-    bottom: -40px;
-  }
-  .footer-p{
-    padding-bottom: 30px;
-  }
-  .footer{
-    padding-bottom: 90px;
-  }
-  .section{
-    padding-bottom: 120px;
-  }
-  .sci li:nth-child(n+2){
-    margin-left: 20px;
-  }
-  .follow{
-    width: 51px;
-  }
-}
-/* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) and (min-width: 320px) {
-  h1{
-    font-size: 25px;
-    }
-    .sci{
-      transform: rotate(90deg) translateX(-80%);
-    }
-    .hero-container .slider{
-      margin-left: -15%;
-    }
-  .logo{
-    font-size: 20px;
-  }
-  .nav li:nth-child(n+2){
-    margin-left: 0;
-  }
-  .nav li{
-    font-weight: 500;
-  }
-  /* .image{
-    display: none;
-  } */
-  .section{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .content{
-    padding-bottom: 40px;
-  }
-  .footer-container{
-    padding: 0 15px;
-  }
-  .footer-navbar{
-    width: 100%;
-  }
-  .wide-container{
-    padding: 0 15px;
-  }
-  .account-button{
-    font-size: 15px;
-  }
-  .hero{
-    padding: 200px 0;
-    min-height: 200px;
-  }
-  .arrow{
-    font-size: 12px;
-    padding-left: 8px;
-  }
-  .account-span{
-    display: none;
-  }
-}
-
-/*=========================ADAPTATION END===========================*/
